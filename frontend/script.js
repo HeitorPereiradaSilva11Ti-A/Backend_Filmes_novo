@@ -1,5 +1,5 @@
 async function buscarfilmes(){
-    const respota = await fetch("http://localhost:8080")
+    const respota = await fetch("https://backend-heitor-filmes.vercel.app/")
     const filmes = await respota.json()
     const sectionFilmes = document.querySelector(".filmes")
 
