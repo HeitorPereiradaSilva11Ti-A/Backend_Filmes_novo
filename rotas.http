@@ -1,0 +1,25 @@
+GET http://localhost:8080/
+###
+POST http://localhost:8080/add-movie
+Content-Type: application/json 
+
+{
+    "titulo_do_filme": "piece by piece",
+    "genero": "documentario biografico",
+    "duracao": "1h 30min",
+    "classificacao_etaria": "L"
+}
+
+###
+DELETE http://localhost:8080/delete-movie/3
+
+###
+PUT http://localhost:8080/update-movie/9
+Content-Type: application/json
+
+{
+    "titulo_do_filme": "A Odisseia",
+    "genero": "Aventura / Drama",
+    "duracao": "2h 52min",
+    "classificacao_etaria": "18"
+}
