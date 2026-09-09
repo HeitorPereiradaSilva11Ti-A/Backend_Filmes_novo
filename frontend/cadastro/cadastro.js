@@ -10,10 +10,10 @@ async function cadastrarFilme() {
     }
 
     const filme = {
-        title: inputTitulo.value,
-        gender: inputGenero.value,
-        ageLimit: inputClassificacao_Etaria.value,
-        duration: inputDuracao.value
+        titulo_do_filme: inputTitulo.value,
+        genero: inputGenero.value,
+        classificacao_etaria: inputClassificacao_Etaria.value,
+        duracao: inputDuracao.value
     }
 
     const informacoesAEnviar = {
