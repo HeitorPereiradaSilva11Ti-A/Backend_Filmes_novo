@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <title>CineCatalog | Gerenciador de Filmes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Frontend</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    < <header>
-        <h1>Lista de Filmes Heitor-Ystella</h1>
 
-        <a href="./cadastro/cadastro.html">Cadastrar novo filme</a>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <span class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                </span>
+                <span class="brand-title">CineCatalog</span>
+            </div>
+            <a href="./cadastro/cadastro.html" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Novo Filme
+            </a>
+        </div>
     </header>
 
-    <section class="filmes"></section>
+    <main class="container">
+        <section class="section-header">
+            <div>
+                <h2>Acervo de Filmes</h2>
+                <p class="section-subtitle">Gerencie o catálogo cadastrado no sistema</p>
+            </div>
+            <span id="total-filmes" class="badge-count">Carregando...</span>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="filmes-grid" id="container-filmes">
+            <!-- Cards gerados via JS -->
+        </section>
+    </main>
+
 </body>
 </html>

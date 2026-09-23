@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Filme | CineCatalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="editar.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <span class="brand-title">CineCatalog</span>
+            </div>
+            <a href="../index.html" class="btn btn-secondary">Voltar à lista</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h2 style="margin-bottom: 8px;">Editar Filme</h2>
+            <p class="section-subtitle" style="margin-bottom: 24px;">Atualize os dados do filme abaixo</p>
+
+            <form id="form-editar">
+                <div class="form-group">
+                    <label for="titulo">Título do Filme</label>
+                    <input type="text" id="titulo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">Gênero</label>
+                    <input type="text" id="genero" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duracao">Duração (ex: 2h 15min)</label>
+                    <input type="text" id="duracao" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="classificacao">Classificação Etária</label>
+                    <input type="text" id="classificacao" placeholder="L, 12, 14, 16, 18" required>
+                </div>
+
+                <div class="form-actions">
+                    <a href="../index.html" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary" id="btn-salvar">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
