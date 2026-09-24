@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
-    <title>Cadastrar novo filme</title>
+    <title>Cadastrar Filme | CineCatalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="cadastro.js" defer></script>
 </head>
 <body>
-    <header>
-        <a href="../index.html">Voltar</a>
-        <h1>Cadastrar novo filme</h1>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <span class="brand-title">CineCatalog</span>
+            </div>
+            <a href="../index.html" class="btn btn-secondary">Voltar à lista</a>
+        </div>
     </header>
 
-    <main>
-        <form>
-            <div>
-                <label for="titulo">Título do filme:</label>
-                <input type="text" id="titulo" placeholder="Digite aqui o título">
-            </div>
-            <div>
-                <label for="genero">Gênero:</label>
-                <input type="text" id="genero" placeholder="Digite aqui o gênero">
-            </div>
-            <div>
-                <label for="classificacao_etaria">Classificação indicativa:</label>
-                <input type="text" id="classificacao_etaria" placeholder="Digite aqui a classificação indicativa">
-            </div>
-            <div>
-                <label for="duracao">Duração:</label>
-                <input type="text" id="duracao" placeholder="Digite aqui a duração">
-            </div>
-        </form>
+    <main class="container">
+        <div class="form-container">
+            <h2 style="margin-bottom: 8px;">Cadastrar Novo Filme</h2>
+            <p class="section-subtitle" style="margin-bottom: 24px;">Preencha os dados abaixo para adicionar um filme ao catálogo</p>
 
-        <button onclick="cadastrarFilme()">Cadastrar</button>
+            <form id="form-cadastro">
+                <div class="form-group">
+                    <label for="titulo">Título do Filme</label>
+                    <input type="text" id="titulo" placeholder="Ex: Interstellar" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">Gênero</label>
+                    <input type="text" id="genero" placeholder="Ex: Ficção Científica" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duracao">Duração</label>
+                    <input type="text" id="duracao" placeholder="Ex: 2h 49min" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="classificacao_etaria">Classificação Indicativa</label>
+                    <input type="text" id="classificacao_etaria" placeholder="Ex: L, 10, 12, 14, 16, 18" required>
+                </div>
+
+                <div class="form-actions">
+                    <a href="../index.html" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary" id="btn-cadastrar">Cadastrar Filme</button>
+                </div>
+            </form>
+        </div>
     </main>
 
-    <script src="cadastro.js"></script>
 </body>
 </html>
